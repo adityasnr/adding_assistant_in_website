@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %} Update {% endblock title %}
+{% block body %}
+        
+      <div class="container my-3" style="width: 1440px; height:630px; position:fixed; margin-top: 63px ; background-color: rgba(238, 237, 237, 0.852); ;border-radius: 5mm;">
+        <h2>Update Task</h2>
+        <form action = '/update/{{todo.sno}}' method = "POST">
+            <div class="mb-3">
+              <label for="title" class="form-label">Task Title</label>
+              <input type="text" class="form-control" name ='title' id="title" value="{{todo.title}}" aria-describedby="emailHelp">
+              
+            </div>
+            <div class="mb-3">
+              <label for="desc" class="form-label">Task description</label>
+              <input type="text" class="form-control" name ='desc' id="desc" value = "{{todo.desc}}">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+      </div>
+
+{% endblock body %}

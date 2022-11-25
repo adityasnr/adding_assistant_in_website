@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %} Dashboard {% endblock title %}
+{% block body %}
+
+<div class="container p-3 top-0 end-0" style="width: 1440px; height:630px; position:fixed; margin-top: 63px ; background-color: rgba(238, 237, 237, 0.852); margin-top: 67px ;border-radius: 5mm;">
+    <form action="/assistant" mathod="POST">
+        <div class="mb-3">
+            <label for="answer" class="form-label">What would you like to do</label>
+            <input type="text" class="form-control" id="answer" name="answer">
+          </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
+
+{% endblock body %}
